@@ -5,4 +5,5 @@ Also the typo is intentional, pyultra was banned by pypi.
 JSON Config System\
 Colorful Text\
 Small Debugging System\
-Discord Webhook Library
+Discord Webhook Library\
+Pastebin Library
