@@ -5,7 +5,7 @@ with open('README.md', 'r', encoding='utf-8') as f:
 
 setup(
     name='pyutra',
-    version='1.0.4.1',
+    version='1.0.5.1',
     packages=find_packages(),
     install_requires=["requests"],
     description='A Python library that tries to be a jack of all trades.',
