@@ -17,3 +17,13 @@ from pyutra.discord import Webhooks
 from pyutra.pastelib.Pastelib import Pastelib
 from pyutra.pastelib.User import User
 from pyutra.pastelib import User, Pastelib
+
+# Internet Library
+from pyutra.internet import ip
+from pyutra.internet import web
+
+# Network Library
+from pyutra.network import Network
+
+# Blocksi Library (Ported): https://github.com/thediamondog/blocksicrap
+from pyutra.blocksi import admin_data, policy_data, user_data

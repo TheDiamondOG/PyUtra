@@ -7,4 +7,5 @@ Colorful Text\
 Small Debugging System\
 Discord Webhook Library\
 Pastebin Library\
-Network/Internet Library
+Network/Internet Library\
+Blocksi Library
