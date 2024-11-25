@@ -2,8 +2,10 @@ import requests
 import xml.etree.ElementTree as ET
 from pyutra.ColorText import ColorText
 from pyutra.pastelib.Pastelib import Pastelib
+from pyutra.CoolDebugging import CoolDebugging
 
 color_system = ColorText()
+debug_system = CoolDebugging()
 
 class User:
     def __init__(self, api_key: str, user_key: str = None, username: str = None, password: str = None):
@@ -11,7 +13,7 @@ class User:
 
         if user_key == None:
             if username == None or password == None:
-                print(color_system.colorize("Can't get user key without the username or password", "red"))
+                debug_system.error("Can't get user key without the username or password")
             else:
                 data = {
                     "api_dev_key": api_key,
@@ -24,11 +26,10 @@ class User:
                 if res.status_code == 200:
                     self.user_key = res.text
                 elif res.text == "Bad API request, invalid login":
-                    print(color_system.colorize("Incorrect username or password", "red"))
+                    debug_system.error("Incorrect username or password")
                     self.user_key = None
                 else:
-                    print(color_system.colorize("Failed to set user key", "red"))
-                    print(color_system.colorize(res.text, "red"))
+                    debug_system.error(f"Failed to set user key\n{res.text}")
                     self.user_key = None
         else:
             self.user_key = user_key

@@ -1,7 +1,9 @@
 import requests
 from pyutra.ColorText import ColorText
+from pyutra.CoolDebugging import CoolDebugging
 
 color_system = ColorText()
+debug_system = CoolDebugging()
 
 class Pastelib:
   def __init__(self, api_key:str):
