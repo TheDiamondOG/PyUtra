@@ -21,3 +21,11 @@ def get_webpage(url:str, hide:str):
         return res.text
     else:
         return False
+
+def grab_robots(domain:str):
+    res = requests.get(f"{domain}/robots.txt")
+
+    if res.status_code == 200:
+        return res.text
+    else:
+        return False
